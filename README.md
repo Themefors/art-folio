@@ -49,6 +49,7 @@ art-folio/
 
 ```bash
 git clone https://github.com/Themefors/art-folio.git
+
 cd art-folio
 
 npm run dev
@@ -58,23 +59,23 @@ npm install
 ```
 
 🖋 Customization
+
 You can easily customize:
 
-Colors via tailwind.config.js
+- Colors via tailwind.config.js
 
-Fonts via globals.css (DM Sans used by default)
+- Fonts via globals.css (DM Sans used by default)
 
-Animations via GSAP logic in components
+- Animations via GSAP logic in components
 
 📃 License
+
 This template is licensed under Themefors License — for personal and commercial use.
 
 🙋‍♂️ Author
+
 Made with ❤️ by Shahriar Fardows
 
-yaml
-Copy
-Edit
 
 ---
 
@@ -85,5 +86,3 @@ Let me know if you want to include:
 - Multi-language support in future updates
 
 Happy shipping! 🚀
-
----
