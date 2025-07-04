@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎨 Art-Folio – Creative Portfolio & Agency Landing Page
 
-## Getting Started
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue)](https://art-folio.themefor.com)
+[![Next.js](https://img.shields.io/badge/Built%20With-Next.js-000?logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Styled%20With-TailwindCSS-38B2AC?logo=tailwindcss)](https://tailwindcss.com/)
+[![GSAP](https://img.shields.io/badge/Animated%20With-GSAP-88CE02?logo=greensock)](https://greensock.com/gsap/)
 
-First, run the development server:
+Art-Folio is a modern, beautifully animated landing page template designed for **designers**, **creatives**, and **agencies** to showcase their work in style. Built with **Next.js**, **Tailwind CSS**, and **GSAP**, it ensures fast performance, smooth animations, and a responsive layout across all devices.
+
+---
+
+## 🚀 Live Demo
+
+🔗 [https://art-folio.themefor.com](https://art-folio.themefor.com)
+
+---
+
+## 🛠️ Features
+
+- ⚡ Built with **Next.js 14**
+- 💨 Styled using **Tailwind CSS**
+- ✨ Smooth scroll-based animations with **GSAP + ScrollTrigger**
+- 🎯 Fully **responsive** and mobile-ready
+- 🌓 Light/Dark mode friendly
+- 🎨 Ideal for **designer portfolios** or **agency websites**
+- 📦 Ready to deploy on **Vercel**
+
+---
+
+## 📁 Folder Structure
+
+art-folio/
+├── components/ # Reusable UI components
+├── pages/ # Routing pages (Next.js)
+├── public/ # Static assets (images, favicon, etc.)
+├── styles/ # Global CSS (Tailwind + Fonts)
+├── tailwind.config.js
+└── next.config.js
+
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 
 ```bash
+git clone https://github.com/Themefors/art-folio.git
+cd art-folio
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+npm install
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
