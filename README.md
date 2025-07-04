@@ -53,3 +53,34 @@ npm run dev
 npm install
 
 ```
+
+🖋 Customization
+You can easily customize:
+
+Colors via tailwind.config.js
+
+Fonts via globals.css (DM Sans used by default)
+
+Animations via GSAP logic in components
+
+📃 License
+This template is licensed under Themefors License — for personal and commercial use.
+
+🙋‍♂️ Author
+Made with ❤️ by Shahriar Fardows
+
+yaml
+Copy
+Edit
+
+---
+
+✅ You can now copy and paste this into your `README.md` in the repo root.  
+Let me know if you want to include:
+- Deployment instructions for Vercel
+- Custom domain setup
+- Multi-language support in future updates
+
+Happy shipping! 🚀
+
+---
