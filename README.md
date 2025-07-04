@@ -3,7 +3,7 @@
 
 # 🎨 Art-Folio – Creative Portfolio & Agency Landing Page
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blue)](https://art-folio.themefor.com)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue)](https://art-folio.themefos.com)
 [![Next.js](https://img.shields.io/badge/Built%20With-Next.js-000?logo=next.js)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Styled%20With-TailwindCSS-38B2AC?logo=tailwindcss)](https://tailwindcss.com/)
 [![GSAP](https://img.shields.io/badge/Animated%20With-GSAP-88CE02?logo=greensock)](https://greensock.com/gsap/)
@@ -14,7 +14,7 @@ Art-Folio is a modern, beautifully animated landing page template designed for *
 
 ## 🚀 Live Demo
 
-🔗 [https://art-folio.themefor.com](https://art-folio.themefor.com)
+🔗 [https://art-folio.themefors.com](https://art-folio.themefors.com)
 
 ---
 
