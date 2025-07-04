@@ -1,3 +1,6 @@
+![Screenshot](./public/Landing-page.png)
+
+
 # 🎨 Art-Folio – Creative Portfolio & Agency Landing Page
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-blue)](https://art-folio.themefor.com)
