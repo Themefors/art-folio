@@ -82,7 +82,7 @@ export default function Hero() {
                 <SwiperSlide key={image.id}>
                   <div className="relative w-full h-full">
                     <Image
-                      src={image.url || "/placeholder.svg"}
+                      src={image.url}
                       alt={`Portfolio image ${image.id}`}
                       fill
                       className="object-cover rounded-xl md:rounded-2xl"

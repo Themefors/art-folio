@@ -117,13 +117,6 @@ const Services = () => {
               </div>
             ))}
           </div>
-
-          {/* Call to Action */}
-          <div className="text-center mt-16">
-            <button className="bg-gradient-to-r from-[#E436A2] to-[#ff6b9d] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-              Get Started Today
-            </button>
-          </div>
         </div>
       </div>
     </section>

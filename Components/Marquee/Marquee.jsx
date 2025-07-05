@@ -21,7 +21,7 @@ const MarqueeSlide = () => {
               {item}
             </h2>
             <Image
-              src={images?.svg?.star || "/placeholder.svg"}
+              src={images?.svg?.star}
               alt="star"
               width={24}
               height={24}
