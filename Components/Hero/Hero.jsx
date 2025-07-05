@@ -43,7 +43,7 @@ export default function Hero() {
               Your Vision, My Design
             </h2>
           </BoxReveal>
-          <BoxReveal>
+          <BoxReveal boxColor={"#E436A2"} duration={0.5}>
             <div className="flex justify-center">
               <p className="text-base sm:text-[17px] md:text-[18px] text-[#343434] mt-6 w-full md:w-[90%] lg:w-[75%] xl:w-[51%] max-w-full text-center">
                 With 4 years of experience, I design impactful brand identities that combine creativity and strategy. I

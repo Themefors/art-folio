@@ -1,3 +1,5 @@
+import { BoxReveal } from "../magicui/box-reveal"
+
 const Services = () => {
   const services = [
     {
@@ -47,13 +49,17 @@ const Services = () => {
       <div className="relative z-10 container mx-auto">
         <div className="py-12 md:py-20 px-4 md:px-5">
           {/* Section Title */}
-          <div className="mb-16">
+        
+             <div className="mb-16">
+                 <BoxReveal boxColor={"#E436A2"} duration={0.5}>
             <h2 className="text-4xl md:text-6xl lg:text-[84px] font-normal leading-tight text-gray-900">
               Our World Class
               <br />
               <span className="text-[#E436A2]">Services</span>
             </h2>
+            </BoxReveal>
           </div>
+         
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
