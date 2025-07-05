@@ -7,7 +7,7 @@ const Parteners = () => {
         <section className="py-14">
             {/* Background color div with full width */}
             <div className=" p-5 text-center w-full py-14">
-                <h2 className="bg-[#E1FFF3] text-[18px] font-normal rounded-full px-6 py-3 inline-block">
+                <h2 className="bg-[#E1FFF3] text-2xl lg:text-[18px] font-normal rounded-full px-6 py-3 inline-block">
                     Our Trusted partners
                 </h2>
             </div>
