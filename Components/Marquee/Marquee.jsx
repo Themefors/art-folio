@@ -1,25 +1,37 @@
-import { Marquee } from "@/components/magicui/marquee";
-import images from "@/public/images";
-import Image from "next/image";
-
+import { Marquee } from "@/components/magicui/marquee"
+import images from "@/public/images"
+import Image from "next/image"
 
 const MarqueeSlide = () => {
-    return (
-        <div className="bg-[#FFFEDA] py-5  ">
-            <Marquee className="flex items-center gap-4 text-black text-xl font-medium">
-                <h2 className=" text-5xl text-[#313131] font-medium ">Creative Strategy</h2>
-                <Image src={images?.svg?.star} alt="star" width={24} height={24} className="mx-6 w-12 h-12" />
+  const marqueeItems = [
+    "Creative Strategy",
+    "Pixel-Perfect Designs",
+    "4+ Years of Experience",
+    "Design that Speaks",
+    "Brand Identity",
+    "Visual Excellence",
+  ]
 
-                <h2 className=" text-5xl text-[#313131] font-medium ">Pixel-Perfect Designs</h2>
-                <Image src={images?.svg?.star} alt="star" width={24} height={24} className="mx-6 w-12 h-12" />
+  return (
+    <div className="bg-[#FFFEDA] py-3 md:py-5 overflow-hidden">
+      <Marquee className="flex items-center gap-2 md:gap-4 text-black text-xl font-medium">
+        {marqueeItems.map((item, index) => (
+          <div key={index} className="flex items-center">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-[#313131] font-medium whitespace-nowrap px-2 md:px-4">
+              {item}
+            </h2>
+            <Image
+              src={images?.svg?.star || "/placeholder.svg"}
+              alt="star"
+              width={24}
+              height={24}
+              className="mx-2 sm:mx-3 md:mx-4 lg:mx-6 w-5 sm:w-4 md:w-6 lg:w-8 xl:w-12 h-5 sm:h-4 md:h-6 lg:h-8 xl:h-12 flex-shrink-0"
+            />
+          </div>
+        ))}
+      </Marquee>
+    </div>
+  )
+}
 
-                <h2 className=" text-5xl text-[#313131] font-medium ">4+ Years of Experience</h2>
-                <Image src={images?.svg?.star} alt="star" width={24} height={24} className="mx-6 w-12 h-12" />
-
-                <h2 className=" text-5xl text-[#313131] font-medium ">Design that Speaks</h2>
-            </Marquee>
-        </div>
-    );
-};
-
-export default MarqueeSlide;
+export default MarqueeSlide
