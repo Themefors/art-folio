@@ -1,10 +1,9 @@
 "use client"
-import { useEffect } from "react"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { ScrollSmoother } from "gsap/ScrollSmoother"
+// import { useEffect } from "react"
+// import { gsap } from "gsap"
+// import { ScrollTrigger } from "gsap/ScrollTrigger"
+// import { ScrollSmoother } from "gsap/ScrollSmoother"
 import CustomCursor from "@/Components/CustomCursor/CustomCursor"
-import Navbar from "@/Components/Navbar/Navbar"
 import Hero from "@/Components/Hero/Hero"
 import Services from "@/Components/Services/Services"
 import CaseStudies from "@/Components/CaseStudies/CaseStudies"
@@ -13,17 +12,17 @@ import Faq from "@/Components/Faq/Faq"
 import Parteners from "@/Components/Parteners/Parteners"
 
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+// gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 export default function Home() {
- useEffect(() => {
-    ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1.2,
-      effects: true,
-    })
-  }, []) 
+//  useEffect(() => {
+//     ScrollSmoother.create({
+//       wrapper: "#smooth-wrapper",
+//       content: "#smooth-content",
+//       smooth: 1.2,
+//       effects: true,
+//     })
+//   }, []) 
 
   return (
     <>
@@ -33,7 +32,6 @@ export default function Home() {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <Navbar />
             <Hero />
             <Parteners/>
             <Services />
