@@ -75,3 +75,4 @@ This template is licensed under Themefors License — for personal and commercia
 🙋‍♂️ Author
 
 Made with ❤️ by Shahriar Fardows
+Design ❤️ by Shihab 
