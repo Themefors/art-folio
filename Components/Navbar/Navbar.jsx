@@ -15,8 +15,8 @@ export default function Navbar() {
   const menuItems = [
     { id: "home", label: "Home", href: "#home" },
     { id: "about", label: "About Me", href: "#about" },
-    { id: "portfolio", label: "Portfolio", href: "#portfolio" },
     { id: "services", label: "Services", href: "#services" },
+    { id: "portfolio", label: "Portfolio", href: "#portfolio" },
     { id: "contact", label: "Contact", href: "#contact" },
   ]
 
@@ -116,7 +116,7 @@ export default function Navbar() {
 
             {/* Navigation Menu - Desktop Only (lg and above) */}
             <div className="hidden lg:flex items-center space-x-8 bg-white rounded-full px-8 py-4">
-              {menuItems.slice(1).map((item, index) => (
+              {menuItems.slice(0).map((item, index) => (
                 <div key={item.id} className="flex items-center">
                   {index > 0 && <span className="text-pink-500 mr-8">•</span>}
                   <Link

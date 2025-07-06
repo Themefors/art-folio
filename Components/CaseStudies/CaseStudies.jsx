@@ -111,7 +111,7 @@ const CaseStudies = () => {
     }, [])
 
     return (
-        <section className="relative min-h-screen">
+        <section id="portfolio" className="relative min-h-screen">
             {/* Gradient Background */}
             <div className="absolute top-0 left-0 w-full h-[70%] bg-gradient-to-b from-[#FBF6FA] to-[#FEFDFE] pointer-events-none z-0" />
 

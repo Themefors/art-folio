@@ -189,7 +189,7 @@ const Review = () => {
   }
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-[#FFE2F4] via-[#FFE6DC] to-[#FFE2F4] py-10 md:py-20 rounded-4xl">
+    <section className="relative  bg-gradient-to-br from-[#FFE2F4] via-[#FFE6DC] to-[#FFE2F4] py-10 md:py-20 rounded-4xl">
       <div className="pl-4 md:pl-6 lg:pl-8 pr-0">
         {/* Section Title */}
         <div className="container mx-auto mb-8 md:mb-16">
