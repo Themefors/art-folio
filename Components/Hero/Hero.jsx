@@ -1,5 +1,6 @@
 "use client"
-import { BoxReveal } from "@/components/magicui/box-reveal"
+import { useEffect, useRef } from "react"
+import { gsap } from "gsap"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/pagination"
@@ -9,6 +10,11 @@ import Image from "next/image"
 import MarqueeSlide from "../Marquee/Marquee"
 
 export default function Hero() {
+  const h1Ref = useRef(null)
+  const h2Ref = useRef(null)
+  const pRef = useRef(null)
+  const sliderRef = useRef(null)
+
   const images = [
     {
       id: 1,
@@ -24,6 +30,86 @@ export default function Hero() {
     },
   ]
 
+  useEffect(() => {
+    const h1 = h1Ref.current
+    const h2 = h2Ref.current
+    const p = pRef.current
+    const slider = sliderRef.current
+
+    if (!h1 || !h2 || !p || !slider) return
+
+    // Set initial states - hidden
+    gsap.set([h1, h2, p, slider], {
+      opacity: 0,
+      y: 100,
+      scale: 0.8,
+    })
+
+    // Create entrance timeline
+    const tl = gsap.timeline({ delay: 0.5 })
+
+    // Animate H1 first
+    tl.to(h1, {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      duration: 1.2,
+      ease: "power3.out",
+    })
+
+    // Animate H2
+    tl.to(
+      h2,
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 1,
+        ease: "power3.out",
+      },
+      "-=0.8", // Start 0.8s before previous animation ends
+    )
+
+    // Animate paragraph
+    tl.to(
+      p,
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.8,
+        ease: "power3.out",
+      },
+      "-=0.6",
+    )
+
+    // Animate slider
+    tl.to(
+      slider,
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 1,
+        ease: "power3.out",
+      },
+      "-=0.4",
+    )
+
+    // Add floating animation for slider after entrance
+    tl.to(slider, {
+      y: -10,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: "power2.inOut",
+    })
+
+    return () => {
+      tl.kill()
+    }
+  }, [])
+
   return (
     <main className="relative">
       <section
@@ -33,29 +119,31 @@ export default function Hero() {
       >
         {/* Heading Section */}
         <div className="flex flex-col justify-center items-center pt-40 text-center px-4">
-          <BoxReveal boxColor={"#E436A2"} duration={0.5}>
-            <h1 className="text-4xl sm:text-5xl md:text-[88px] text-black font-medium leading-tight">
-              It's <span className="text-[#E436A2] bg-white px-7 py-5 rounded-full inline-block">Humaira</span>
-            </h1>
-          </BoxReveal>
-          <BoxReveal boxColor={"#E436A2"} duration={0.5}>
-            <h2 className="text-3xl sm:text-4xl md:text-[88px] text-black font-normal leading-tight mt-5">
-              Your Vision, My Design
-            </h2>
-          </BoxReveal>
-          <BoxReveal boxColor={"#E436A2"} duration={0.5}>
-            <div className="flex justify-center">
-              <p className="text-base sm:text-[17px] md:text-[18px] text-[#343434] mt-6 w-full md:w-[90%] lg:w-[75%] xl:w-[51%] max-w-full text-center">
-                With 4 years of experience, I design impactful brand identities that combine creativity and strategy. I
-                craft logos, visuals, and systems that help businesses stand out with clarity, purpose, and style.
-              </p>
-            </div>
-          </BoxReveal>
+          <h1 ref={h1Ref} className="text-4xl sm:text-5xl md:text-[88px] text-black font-medium leading-tight">
+            It's <span className="text-[#E436A2] bg-white px-7 py-5 rounded-full inline-block">Humaira</span>
+          </h1>
+
+          <h2 ref={h2Ref} className="text-3xl sm:text-4xl md:text-[88px] text-black font-normal leading-tight mt-5">
+            Your Vision, My Design
+          </h2>
+
+          <div className="flex justify-center">
+            <p
+              ref={pRef}
+              className="text-base sm:text-[17px] md:text-[18px] text-[#343434] mt-6 w-full md:w-[90%] lg:w-[75%] xl:w-[51%] max-w-full text-center"
+            >
+              With 4 years of experience, I design impactful brand identities that combine creativity and strategy. I
+              craft logos, visuals, and systems that help businesses stand out with clarity, purpose, and style.
+            </p>
+          </div>
         </div>
 
         {/* Image Slider - Mobile Responsive */}
         <div className="flex justify-center mt-8 md:mt-12 px-2 md:px-4">
-          <div className="bg-white rounded-2xl md:rounded-3xl p-2 md:p-4 shadow-lg w-full max-w-7xl h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[70vh]">
+          <div
+            ref={sliderRef}
+            className="bg-white rounded-2xl md:rounded-3xl p-2 md:p-4 shadow-lg w-full max-w-7xl h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[70vh]"
+          >
             <Swiper
               pagination={{
                 clickable: true,
@@ -82,7 +170,7 @@ export default function Hero() {
                 <SwiperSlide key={image.id}>
                   <div className="relative w-full h-full">
                     <Image
-                      src={image.url}
+                      src={image.url || "/placeholder.svg"}
                       alt={`Portfolio image ${image.id}`}
                       fill
                       className="object-cover rounded-xl md:rounded-2xl"

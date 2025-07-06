@@ -248,14 +248,6 @@ const Faq = () => {
         <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-[#E436A2]/20 to-transparent rounded-full blur-xl"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-br from-[#E436A2]/10 to-transparent rounded-full blur-2xl"></div>
         <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-br from-[#E436A2]/15 to-transparent rounded-full blur-lg"></div>
-
-        {/* Contact CTA */}
-        <div className="text-center mt-16">
-          <p className="text-gray-600 mb-6 text-lg">Still have questions?</p>
-          <button className="bg-gradient-to-r from-[#E436A2] to-[#ff6b9d] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-            Get In Touch
-          </button>
-        </div>
       </div>
     </section>
   )

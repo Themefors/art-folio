@@ -31,7 +31,7 @@ export default function Navbar() {
         gsap.to(navbar, {
           duration: 0.3,
           backdropFilter: "blur(4px)",
-          backgroundColor: "rgb(255 255 255 / 0%)",
+          backgroundColor: "rgb(255 255 255 / 48%)",
           ease: "power2.out",
         })
       } else {
@@ -136,9 +136,11 @@ export default function Navbar() {
             {/* Right side - Book A Call + Hamburger */}
             <div className="flex items-center space-x-4">
               {/* Book A Call Button - Show on md and above */}
+             <Link href='#contact'>
               <button className="hidden md:block bg-pink-500 text-white px-6 py-3 rounded-full font-medium hover:bg-pink-600 transition-all duration-200 transform hover:scale-105">
                 Book A Call
               </button>
+             </Link>
 
               {/* Mobile/Tablet Menu Button - Show on lg and below */}
               <button onClick={toggleMobileMenu} className="lg:hidden text-gray-800 z-60">
@@ -190,12 +192,14 @@ export default function Navbar() {
 
           {/* Mobile Book A Call Button - Only show on mobile (sm and below) */}
           <div className="p-6 border-t md:hidden">
+            <Link href='#contact'>
             <button
               onClick={closeMobileMenu}
               className="w-full bg-pink-500 text-white px-6 py-3 rounded-full font-medium hover:bg-pink-600 transition-all duration-200"
             >
               Book A Call
             </button>
+            </Link>
           </div>
         </div>
       </div>

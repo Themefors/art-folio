@@ -1,6 +1,14 @@
-import { BoxReveal } from "../magicui/box-reveal"
+"use client"
+
+import { useEffect, useRef } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Services = () => {
+  const titleRef = useRef(null)
+
   const services = [
     {
       id: 1,
@@ -40,8 +48,33 @@ const Services = () => {
     },
   ]
 
+  useEffect(() => {
+    const title = titleRef.current
+
+    // Set initial state for title
+    gsap.set(title, { y: 100, opacity: 0 })
+
+    // Animate title
+    gsap.to(title, {
+      y: 0,
+      opacity: 1,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: title,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    })
+
+    // Cleanup
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+    }
+  }, [])
+
   return (
-    <section id="services"  className="relative min-h-screen">
+    <section id="services" className="relative min-h-screen">
       {/* Gradient Overlay */}
       <div className="absolute top-0 left-0 w-full h-[70%] bg-gradient-to-b from-[#FBF6FA] to-[#FEFDFE] pointer-events-none z-0" />
 
@@ -49,17 +82,13 @@ const Services = () => {
       <div className="relative z-10 container mx-auto">
         <div className="py-12 md:py-20 px-4 md:px-5">
           {/* Section Title */}
-        
-             <div className="mb-16">
-                 <BoxReveal boxColor={"#E436A2"} duration={0.5}>
-            <h2 className="text-4xl md:text-6xl lg:text-[84px] font-normal leading-tight text-gray-900">
+          <div className="mb-16">
+            <h2 ref={titleRef} className="text-4xl md:text-6xl lg:text-[84px] font-normal leading-tight text-gray-900">
               Our World Class
               <br />
               <span className="text-[#E436A2]">Services</span>
             </h2>
-            </BoxReveal>
           </div>
-         
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -85,7 +114,23 @@ const Services = () => {
 
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#E436A2] to-[#ff6b9d] rounded-2xl flex items-center justify-center text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div
+                    className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300"
+                    style={{
+                      backgroundColor:
+                        index % 6 === 0
+                          ? "#f3dff3"
+                          : index % 6 === 1
+                            ? "#ceeaf7"
+                            : index % 6 === 2
+                              ? "#c3f399"
+                              : index % 6 === 3
+                                ? "#ffd6cc"
+                                : index % 6 === 4
+                                  ? "#fff2cc"
+                                  : "#e6ccff",
+                    }}
+                  >
                     {service.icon}
                   </div>
                 </div>
@@ -123,4 +168,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Services;

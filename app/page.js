@@ -10,6 +10,8 @@ import CaseStudies from "@/Components/CaseStudies/CaseStudies"
 import Review from "@/Components/Review/Review"
 import Faq from "@/Components/Faq/Faq"
 import Parteners from "@/Components/Parteners/Parteners"
+import Pricing from "@/Components/Priceing/Priceing"
+import Contact from "@/Components/Contact/Contact"
 
 
 // gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
@@ -37,7 +39,9 @@ export default function Home() {
             <Services />
             <CaseStudies />
             <Review />
+            <Pricing/>
             <Faq />
+            <Contact/>
           </main>
         </div>
       </div>

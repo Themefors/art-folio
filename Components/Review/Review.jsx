@@ -1,4 +1,5 @@
 "use client"
+
 import { useEffect, useRef, useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
@@ -163,7 +164,6 @@ const Review = () => {
 
   const handleSlideChange = (swiper) => {
     setCurrentSlide(swiper.activeIndex + 1)
-
     // Animate active card
     const activeCard = cardsRef.current[swiper.activeIndex]
     if (activeCard) {
@@ -179,7 +179,7 @@ const Review = () => {
     return Array.from({ length: 5 }, (_, index) => (
       <svg
         key={index}
-        className={`w-4 h-4 ${index < rating ? "text-pink-400" : "text-gray-300"}`}
+        className={`w-3 h-3 sm:w-4 sm:h-4 ${index < rating ? "text-pink-400" : "text-gray-300"}`}
         fill="currentColor"
         viewBox="0 0 20 20"
       >
@@ -189,13 +189,13 @@ const Review = () => {
   }
 
   return (
-    <section className="relative  bg-gradient-to-br from-[#FFE2F4] via-[#FFE6DC] to-[#FFE2F4] py-10 md:py-20 rounded-4xl">
-      <div className="pl-4 md:pl-6 lg:pl-8 pr-0">
+    <section className="relative bg-gradient-to-br from-[#FFE2F4] via-[#FFE6DC] to-[#FFE2F4] py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 rounded-4xl">
+      <div className="pl-3 sm:pl-4 md:pl-6 lg:pl-8 xl:pl-10 pr-0">
         {/* Section Title */}
-        <div className="container mx-auto mb-8 md:mb-16">
+        <div className="container mx-auto mb-6 sm:mb-8 md:mb-12 lg:mb-16 xl:mb-20">
           <h2
             ref={titleRef}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[84px] font-bold text-[#0B1838] leading-tight max-w-5xl"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[84px] font-bold text-[#0B1838] leading-tight max-w-5xl px-2 sm:px-0"
           >
             Trusted By Top
             <br />
@@ -205,11 +205,11 @@ const Review = () => {
 
         {/* Reviews Slider */}
         <div className="reviews-container relative">
-          <div className="pl-2 sm:pl-4 md:pl-8 lg:pl-14 xl:pl-40">
+          <div className="pl-1 sm:pl-2 md:pl-4 lg:pl-8 xl:pl-14 2xl:pl-40">
             <Swiper
               ref={swiperRef}
               modules={[Navigation, Autoplay]}
-              spaceBetween={20}
+              spaceBetween={12}
               slidesPerView={1}
               autoplay={{
                 delay: 5000,
@@ -219,32 +219,40 @@ const Review = () => {
               loop={true}
               onSlideChange={handleSlideChange}
               breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 12,
+                },
                 480: {
                   slidesPerView: 1.2,
                   spaceBetween: 15,
                 },
                 640: {
                   slidesPerView: 1.5,
-                  spaceBetween: 20,
+                  spaceBetween: 18,
                 },
                 768: {
                   slidesPerView: 2,
-                  spaceBetween: 25,
+                  spaceBetween: 20,
                 },
                 1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 30,
+                  slidesPerView: 2.5,
+                  spaceBetween: 25,
                 },
                 1280: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 28,
+                },
+                1536: {
                   slidesPerView: 4,
                   spaceBetween: 30,
                 },
-                1536: {
+                1920: {
                   slidesPerView: 4.5,
-                  spaceBetween: 30,
+                  spaceBetween: 32,
                 },
               }}
-              className="reviews-swiper pb-8 md:pb-16"
+              className="reviews-swiper pb-6 sm:pb-8 md:pb-12 lg:pb-16"
               navigation={{
                 nextEl: ".review-next",
                 prevEl: ".review-prev",
@@ -254,40 +262,42 @@ const Review = () => {
                 <SwiperSlide key={review.id}>
                   <div
                     ref={(el) => (cardsRef.current[index] = el)}
-                    className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-[280px] sm:h-[320px] flex flex-col"
+                    className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-[260px] sm:h-[280px] md:h-[300px] lg:h-[320px] xl:h-[340px] flex flex-col"
                   >
                     {/* Author Info */}
-                    <div className="flex items-center mb-4">
-                      <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <div className="flex items-center mb-3 sm:mb-4">
+                      <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full overflow-hidden mr-3 sm:mr-4 flex-shrink-0">
                         <Image
                           src={review.authorImage || "/placeholder.svg"}
                           alt={review.authorName}
                           fill
                           className="object-cover"
-                          sizes="48px"
+                          sizes="(max-width: 640px) 40px, (max-width: 768px) 48px, 56px"
                         />
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">
+                      <div className="min-w-0 flex-1">
+                        <h4 className="font-semibold text-gray-900 text-xs sm:text-sm md:text-base truncate">
                           {review.authorName.split(" ")[0]} {review.authorName.split(" ")[1]?.[0]},{" "}
                           {review.position.split(" ")[0]}
                         </h4>
-                        <p className="text-gray-600 text-xs">{review.company.split(" ")[0]}</p>
+                        <p className="text-gray-600 text-xs sm:text-sm truncate">{review.company.split(" ")[0]}</p>
                       </div>
                     </div>
 
                     {/* Review Text */}
-                    <div className="mb-6 flex-grow">
-                      <p className="text-gray-700 text-sm leading-relaxed line-clamp-4">{review.description}</p>
+                    <div className="mb-4 sm:mb-6 flex-grow">
+                      <p className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed line-clamp-3 sm:line-clamp-4 md:line-clamp-5">
+                        {review.description}
+                      </p>
                     </div>
 
                     {/* Company Logo with Stars */}
-                    <div className="border-t pt-4">
+                    <div className="border-t pt-3 sm:pt-4 mt-auto">
                       <div className="flex items-center justify-between">
-                        <div className="text-xs font-bold text-gray-800 uppercase tracking-wider">
+                        <div className="text-xs sm:text-sm font-bold text-gray-800 uppercase tracking-wider truncate flex-1 mr-2">
                           {review.companyLogo}
                         </div>
-                        <div className="flex space-x-1">{renderStars(review.rating)}</div>
+                        <div className="flex space-x-1 flex-shrink-0">{renderStars(review.rating)}</div>
                       </div>
                     </div>
                   </div>
@@ -297,13 +307,13 @@ const Review = () => {
           </div>
 
           {/* Navigation Controls */}
-          <div className="flex flex-col sm:flex-row items-center justify-between mt-6 md:mt-8 container mx-auto gap-4 sm:gap-0">
+          <div className="flex flex-col sm:flex-row items-center justify-between mt-4 sm:mt-6 md:mt-8 lg:mt-10 container mx-auto gap-3 sm:gap-4 px-3 sm:px-4">
             {/* Progress Indicator */}
-            <div className="flex items-center space-x-2 sm:space-x-4 order-2 sm:order-1">
-              <div className="text-base sm:text-lg font-semibold text-[#1a365d]">
+            <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 order-2 sm:order-1 w-full sm:w-auto">
+              <div className="text-sm sm:text-base md:text-lg font-semibold text-[#1a365d] flex-shrink-0">
                 {String(currentSlide).padStart(2, "0")}/{String(totalSlides).padStart(2, "0")}
               </div>
-              <div className="w-20 sm:w-32 md:w-48 lg:w-64 xl:w-[70rem] h-1 bg-gray-300 rounded-full overflow-hidden">
+              <div className="flex-1 sm:w-20 md:w-32 lg:w-48 xl:w-64 2xl:w-[70rem] h-1 bg-gray-300 rounded-full overflow-hidden">
                 <div
                   className="h-full bg-pink-400 transition-all duration-300 ease-out"
                   style={{ width: `${(currentSlide / totalSlides) * 100}%` }}
@@ -312,18 +322,28 @@ const Review = () => {
             </div>
 
             {/* Navigation Buttons */}
-            <div className="flex items-center space-x-2 sm:space-x-4 order-1 sm:order-2">
-              <button className="review-prev w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-full shadow-md hover:shadow-lg flex items-center justify-center text-gray-600 hover:text-pink-500 transition-all duration-300">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 order-1 sm:order-2 flex-shrink-0">
+              <button className="review-prev w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-white rounded-full shadow-md hover:shadow-lg flex items-center justify-center text-gray-600 hover:text-pink-500 transition-all duration-300">
+                <svg
+                  className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              <button className="review-next w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-full shadow-md hover:shadow-lg flex items-center justify-center text-gray-600 hover:text-pink-500 transition-all duration-300">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <button className="review-next w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-white rounded-full shadow-md hover:shadow-lg flex items-center justify-center text-gray-600 hover:text-pink-500 transition-all duration-300">
+                <svg
+                  className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
-              <button className="bg-white py-2 px-4 sm:px-6 rounded-full text-[#E436A2] font-medium text-xs sm:text-sm hover:text-pink-600 transition-colors duration-300">
+              <button className="bg-white py-1.5 px-3 sm:py-2 sm:px-4 md:px-6 rounded-full text-[#E436A2] font-medium text-xs sm:text-sm hover:text-pink-600 transition-colors duration-300">
                 View All
               </button>
             </div>

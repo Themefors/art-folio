@@ -6,7 +6,6 @@ import { Navigation, Autoplay } from "swiper/modules"
 import Image from "next/image"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
-import { BoxReveal } from "../magicui/box-reveal"
 
 const CaseStudies = () => {
     const buttonRef = useRef(null)
@@ -119,7 +118,6 @@ const CaseStudies = () => {
             <div className="relative z-10 container mx-auto">
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center py-12 md:py-20 px-4 md:px-5 gap-8 lg:gap-0">
                     {/* Section Title */}
-                    <BoxReveal>
                         <div>
                             <h2 ref={titleRef} className="text-4xl md:text-6xl lg:text-[84px] font-normal leading-tight text-gray-900">
                                 Real Case
@@ -127,8 +125,7 @@ const CaseStudies = () => {
                                 <span className="text-[#E436A2]">Studies</span>
                             </h2>
                         </div>
-                    </BoxReveal>
-
+                    
                     {/* Right Content */}
                     <div className="max-w-lg">
                         <h3 ref={subtitleRef} className="text-xl md:text-2xl font-normal text-black leading-relaxed mb-6">
