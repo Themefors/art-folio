@@ -1,11 +1,10 @@
 "use client"
-
-import { useEffect, useRef } from "react"
-import Image from "next/image"
-import { Marquee } from "../magicui/marquee"
-import images from "@/public/images"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import { Marquee } from "../magicui/marquee";
+import images from "@/public/images";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger)
 

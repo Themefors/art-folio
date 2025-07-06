@@ -1,6 +1,6 @@
-import { Marquee } from "@/components/magicui/marquee"
-import images from "@/public/images"
-import Image from "next/image"
+import images from "@/public/images";
+import Image from "next/image";
+import { Marquee } from "../magicui/marquee";
 
 const MarqueeSlide = () => {
   const marqueeItems = [
