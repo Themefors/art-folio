@@ -126,7 +126,7 @@ const Footer = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-white">Email Us</div>
-                      <div className="text-purple-300">hello@shahriar.design</div>
+                      <div className="text-purple-300">hello@teachfosys.com</div>
                     </div>
                   </div>
 
@@ -202,7 +202,7 @@ const Footer = () => {
                       { name: "Brand Identity", desc: "Complete brand systems" },
                       { name: "Social Media", desc: "Engaging visual content" },
                     ].map((service, index) => (
-                      <a
+                      <Link
                         key={index}
                         href="#"
                         className="group flex items-center justify-between p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 hover:border-pink-500/30 transition-all duration-300"
@@ -221,7 +221,7 @@ const Footer = () => {
                         >
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -269,7 +269,7 @@ const Footer = () => {
                       { name: "Contact", desc: "Get in touch" },
                       { name: "Blog", desc: "Design insights" },
                     ].map((link, index) => (
-                      <a
+                      <Link
                         key={index}
                         href="#"
                         className="group flex items-center justify-between p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 hover:border-blue-500/30 transition-all duration-300"
@@ -288,7 +288,7 @@ const Footer = () => {
                         >
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
