@@ -30,18 +30,18 @@ export const metadata = {
     "frontend portfolio",
     "artfolio",
   ],
-  authors: [{ name: "Shahriar Fardows", url: "https://shahriarfardows.netlify.app/" }],
-  creator: "Shahriar Fardows",
+  authors: [{ name: "Teachfosys", url: "https://teachfosys.com/" }],
+  creator: "Teachfosys",
   themeColor: "#ffffff",
   openGraph: {
     title: "Art-Folio – Modern Portfolio & Agency Template",
     description:
       "Create stunning designer portfolios and agency landing pages with Art-Folio. Built using Next.js, Tailwind CSS, and GSAP.",
-    url: "https://your-demo-link.com",
+    url: "https://art-folio.teachfosys.com/",
     siteName: "Art-Folio",
     images: [
       {
-        url: "/Logo.svg",
+        url: "/public/Logo.svg",
         width: 1200,
         height: 630,
         alt: "Art-Folio Preview",
