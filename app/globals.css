@@ -44,9 +44,9 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 /* ✅ Apply font globally */
 body {
@@ -165,3 +165,37 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* globals.css or component CSS file */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8edda; /* Light background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    #f3dff3,
+    #ceeaf7,
+    #f8edda,
+    #ece0f7
+  );
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    #ece0f7,
+    #f8edda,
+    #ceeaf7,
+    #f3dff3
+  );
+}
+
+
+

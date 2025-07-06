@@ -110,9 +110,11 @@ export default function Navbar() {
 
           <div className="flex items-center justify-between">
             {/* Logo */}
+            <Link href="/">
             <div className="text-2xl font-bold text-black">
               <Image src={images?.svg?.logo } alt="logo" className="w-28 md:w-40 h-auto" />
             </div>
+            </Link>
 
             {/* Navigation Menu - Desktop Only (lg and above) */}
             <div className="hidden lg:flex items-center space-x-8 bg-white rounded-full px-8 py-4">
