@@ -25,6 +25,7 @@ const MarqueeSlide = () => {
               alt="star"
               width={24}
               height={24}
+              placeholder="blur"
               className="mx-2 sm:mx-3 md:mx-4 lg:mx-6 w-5 sm:w-4 md:w-6 lg:w-8 xl:w-12 h-5 sm:h-4 md:h-6 lg:h-8 xl:h-12 flex-shrink-0"
             />
           </div>

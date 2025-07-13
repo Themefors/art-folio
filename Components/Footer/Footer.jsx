@@ -68,6 +68,7 @@ const Footer = () => {
                       alt="logo"
                       width={160}
                       height={60}
+                      placeholder="blur"
                       className="w-28 md:w-40 h-auto invert"
                     />
                   </Link>

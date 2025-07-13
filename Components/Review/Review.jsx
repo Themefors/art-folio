@@ -271,6 +271,7 @@ const Review = () => {
                           src={review.authorImage || "/placeholder.svg"}
                           alt={review.authorName}
                           fill
+                          placeholder="blur"
                           className="object-cover"
                           sizes="(max-width: 640px) 40px, (max-width: 768px) 48px, 56px"
                         />

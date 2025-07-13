@@ -173,6 +173,7 @@ export default function Hero() {
                       src={image.url || "/placeholder.svg"}
                       alt={`Portfolio image ${image.id}`}
                       fill
+                      placeholder="blur"
                       className="object-cover rounded-xl md:rounded-2xl"
                       sizes="(max-width: 640px) 95vw, (max-width: 768px) 90vw, (max-width: 1200px) 80vw, 70vw"
                       priority={image.id === 1}

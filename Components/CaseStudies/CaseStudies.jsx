@@ -200,6 +200,7 @@ const CaseStudies = () => {
                                         src={caseStudy.image || "/placeholder.svg"}
                                         alt={caseStudy.title}
                                         fill
+                                        placeholder="blur"
                                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                                         sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 25vw"
                                     />
