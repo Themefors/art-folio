@@ -1,12 +1,12 @@
 "use client"
-import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css"
-import "swiper/css/pagination"
-import "swiper/css/autoplay"
-import { Pagination, Autoplay } from "swiper/modules"
 import Image from "next/image"
+import { useEffect, useRef } from "react"
+import "swiper/css"
+import "swiper/css/autoplay"
+import "swiper/css/pagination"
+import { Autoplay, Pagination } from "swiper/modules"
+import { Swiper, SwiperSlide } from "swiper/react"
 import MarqueeSlide from "../Marquee/Marquee"
 
 export default function Hero() {
@@ -173,7 +173,7 @@ export default function Hero() {
                       src={image.url || "/placeholder.svg"}
                       alt={`Portfolio image ${image.id}`}
                       fill
-                      placeholder="blur"
+                      
                       className="object-cover rounded-xl md:rounded-2xl"
                       sizes="(max-width: 640px) 95vw, (max-width: 768px) 90vw, (max-width: 1200px) 80vw, 70vw"
                       priority={image.id === 1}

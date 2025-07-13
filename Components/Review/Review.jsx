@@ -1,13 +1,13 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css"
-import "swiper/css/navigation"
-import { Navigation, Autoplay } from "swiper/modules"
-import Image from "next/image"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import Image from "next/image"
+import { useEffect, useRef, useState } from "react"
+import "swiper/css"
+import "swiper/css/navigation"
+import { Autoplay, Navigation } from "swiper/modules"
+import { Swiper, SwiperSlide } from "swiper/react"
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger)
@@ -271,7 +271,7 @@ const Review = () => {
                           src={review.authorImage || "/placeholder.svg"}
                           alt={review.authorName}
                           fill
-                          placeholder="blur"
+                          
                           className="object-cover"
                           sizes="(max-width: 640px) 40px, (max-width: 768px) 48px, 56px"
                         />

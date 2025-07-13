@@ -112,7 +112,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/">
             <div className="text-2xl font-bold text-black">
-              <Image src={images?.svg?.logo } placeholder="blur" alt="logo" className="w-28 md:w-40 h-auto" />
+              <Image src={images?.svg?.logo }  alt="logo" className="w-28 md:w-40 h-auto" />
             </div>
             </Link>
 
@@ -166,7 +166,7 @@ export default function Navbar() {
         <div className="flex flex-col h-full">
           {/* Mobile Menu Header */}
           <div className="flex items-center justify-between p-6 border-b">
-            <Image src={images?.svg?.logo } placeholder="blur" alt="logo" className="w-24 h-auto" />
+            <Image src={images?.svg?.logo } alt="logo" className="w-24 h-auto" />
             <button onClick={closeMobileMenu} className="text-gray-800">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

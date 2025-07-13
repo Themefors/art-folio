@@ -1,11 +1,11 @@
 "use client"
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css"
-import "swiper/css/navigation"
-import { Navigation, Autoplay } from "swiper/modules"
+import { gsap } from "gsap"
 import Image from "next/image"
 import { useEffect, useRef } from "react"
-import { gsap } from "gsap"
+import "swiper/css"
+import "swiper/css/navigation"
+import { Autoplay, Navigation } from "swiper/modules"
+import { Swiper, SwiperSlide } from "swiper/react"
 
 const CaseStudies = () => {
     const buttonRef = useRef(null)
@@ -200,7 +200,7 @@ const CaseStudies = () => {
                                         src={caseStudy.image || "/placeholder.svg"}
                                         alt={caseStudy.title}
                                         fill
-                                        placeholder="blur"
+                                        
                                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                                         sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 25vw"
                                     />

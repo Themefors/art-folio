@@ -71,11 +71,11 @@ const Partners = () => {
       </div>
       <div ref={marqueeRef}>
         <Marquee>
-          <Image src={images?.svg?.cldBank || "/placeholder.svg"} placeholder="blur" alt="cld bank" className="w-60" />
-          <Image src={images?.svg?.dailMail || "/placeholder.svg"} placeholder="blur" alt="daily mail" className="w-60" />
-          <Image src={images?.svg?.inman || "/placeholder.svg"} placeholder="blur" alt="inman" className="w-60" />
-          <Image src={images?.svg?.realtyGroup || "/placeholder.svg"} placeholder="blur" alt="realty group" className="w-60" />
-          <Image src={images?.svg?.usaToday || "/placeholder.svg"} placeholder="blur" alt="usa today" className="w-60" />
+          <Image src={images?.svg?.cldBank || "/placeholder.svg"}  alt="cld bank" className="w-60" />
+          <Image src={images?.svg?.dailMail || "/placeholder.svg"}  alt="daily mail" className="w-60" />
+          <Image src={images?.svg?.inman || "/placeholder.svg"}  alt="inman" className="w-60" />
+          <Image src={images?.svg?.realtyGroup || "/placeholder.svg"}  alt="realty group" className="w-60" />
+          <Image src={images?.svg?.usaToday || "/placeholder.svg"}  alt="usa today" className="w-60" />
         </Marquee>
       </div>
     </section>
