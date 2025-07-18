@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art-Folio Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #1e40af;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg my-8">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-900">Art-Folio Documentation</h1>
+            <p class="text-lg text-gray-600 mt-2">Creative Portfolio & Agency Landing Page Template</p>
+            <p class="text-sm text-gray-500">Version 1.0.0 | Last Updated: July 18, 2025</p>
+        </header>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Introduction</h2>
+            <p class="text-gray-700">
+                Thank you for purchasing <strong>Art-Folio</strong>, a modern landing page template designed for designers, creatives, and agencies. Built with <strong>Next.js</strong>, <strong>Tailwind CSS</strong>, and <strong>GSAP</strong>, Art-Folio offers a fast, responsive, and animated portfolio showcase.
+            </p>
+            <p class="text-gray-700 mt-2">
+                This documentation guides you through installing, customizing, and deploying the support. For support, visit <a href="https://support.teachfosys.com">support.teachfosys.com</a>.
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Features</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Built with Next.js for fast performance and server-side rendering</li>
+                <li>Styled with Tailwind CSS for easy customization</li>
+                <li>Smooth animations using GSAP and ScrollTrigger</li>
+                <li>Fully responsive for mobile, tablet, and desktop</li>
+                <li>Light and dark mode support</li>
+                <li>Perfect for portfolios, agency websites, or creative showcases</li>
+                <li>Ready to deploy on Vercel or similar platforms</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Getting Started</h2>
+            <h3 class="text-xl font-medium text-gray-800 mb-2">Requirements</h3>
+            <p class="text-gray-700">Before you begin, ensure you have:</p>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li><strong>Node.js</strong> (version 16 or higher) - Download from <a href="https://nodejs.org">nodejs.org</a></li>
+                <li><strong>npm</strong> (included with Node.js) or <strong>yarn</strong> (optional)</li>
+                <li>A code editor like <a href="https://code.visualstudio.com">Visual Studio Code</a></li>
+            </ul>
+
+            <h3 class="text-xl font-medium text-gray-800 mt-4 mb-2">Installation Steps</h3>
+            <ol class="list-decimal list-inside text-gray-700 space-y-4">
+                <li>
+                    <strong>Unzip the Template</strong>:
+                    <p class="text-gray-700 mt-1">Extract the purchased ZIP file to a folder on your computer.</p>
+                </li>
+                <li>
+                    <strong>Install Dependencies</strong>:
+                    <p class="text-gray-700 mt-1">Open a terminal, navigate to the project folder, and run:</p>
+                    <pre>npm install</pre>
+                </li>
+                <li>
+                    <strong>Start the Development Server</strong>:
+                    <p class="text-gray-700 mt-1">Run the following command to start the template:</p>
+                    <pre>npm run dev</pre>
+                    <p class="text-gray-700 mt-2">Open <a href="http://localhost:3000">http://localhost:3000</a> in your browser to view the support.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Project Structure</h2>
+            <p class="text-gray-700">The template is organized as follows:</p>
+            <pre>
+art-folio/
+├── components/         # Reusable UI components
+├── pages/             # Next.js page routes
+├── public/            # Images, favicon, and static assets
+├── styles/            # Global CSS and Tailwind styles
+├── tailwind.config.js # Tailwind CSS configuration
+├── next.config.js     # Next.js configuration
+├── package.json       # Project dependencies and scripts
+├── README.md          # Basic project information
+└── documentation.html # This file
+            </pre>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Customization</h2>
+            <p class="text-gray-700">Customize Art-Folio to match your brand:</p>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li><strong>Colors</strong>: Edit <code>tailwind.config.js</code> to change the color scheme.</li>
+                <li><strong>Fonts</strong>: Modify <code>styles/globals.css</code> to use a different font (DM Sans is the default).</li>
+                <li><strong>Animations</strong>: Update GSAP animations in <code>components/</code> files.</li>
+                <li><strong>Content</strong>: Replace images in <code>public/</code> and text in <code>components/</code> or <code>pages/</code>.</li>
+            </ul>
+            <p class="text-gray-700 mt-2">Refer to the <a href="https://tailwindcss.com/docs">Tailwind CSS documentation</a> and <a href="https://greensock.com/docs">GSAP documentation</a> for advanced customization.</p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Deployment</h2>
+            <p class="text-gray-700">To deploy Art-Folio to a live website:</p>
+            <ol class="list-decimal list-inside text-gray-700 space-y-2">
+                <li>Create a repository on <a href="https://github.com">GitHub</a> and push your project files.</li>
+                <li>Sign up at <a href="https://vercel.com">Vercel</a> and connect your GitHub repository.</li>
+                <li>Use the default Next.js build settings in Vercel.</li>
+                <li>Deploy your site and share the live URL.</li>
+            </ol>
+            <p class="text-gray-700 mt-2">For other hosting platforms, refer to their documentation for Next.js deployment.</p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Troubleshooting</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li><strong>npm install fails</strong>: Ensure Node.js is installed and run <code>npm cache clean --force</code>, then retry.</li>
+                <li><strong>Page not loading</strong>: Check that the development server is running (<code>npm run dev</code>) and visit <a href="http://localhost:3000">http://localhost:3000</a>.</li>
+                <li><strong>Assets missing</strong>: Ensure all images and files are in the <code>public/</code> folder.</li>
+            </ul>
+            <p class="text-gray-700 mt-2">For further assistance, contact us at <a href="https://support.teachfosys.com">support.teachfosys.com</a>.</p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">License</h2>
+            <p class="text-gray-700">
+                Art-Folio is licensed for personal and commercial use under the <strong>Teachfosys License</strong>. See the <code>LICENSE</code> file in the project folder for details.
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Support</h2>
+            <p class="text-gray-700">
+                For help, visit <a href="https://support.teachfosys.com">support.teachfosys.com</a> or email our support team. Response time is typically within 24-48 hours.
+            </p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Changelog</h2>
+            <h3 class="text-xl font-medium text-gray-800 mb-2">Version 1.0.0 - July 18, 2025</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Initial release of Art-Folio</li>
+                <li>Added support for Next.js, Tailwind CSS, and GSAP</li>
+                <li>Included responsive design and light/dark mode</li>
+            </ul>
+        </section>
+
+        <footer class="text-center text-gray-600 mt-8">
+            <p>Made with ❤️ by Teachfosys</p>
+        </footer>
+    </div>
+</body>
+</html>
