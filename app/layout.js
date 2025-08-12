@@ -41,7 +41,7 @@ export const metadata = {
     siteName: "Art-Folio",
     images: [
       {
-        url: "/public/Logo.svg",
+        url: "https://art-folio.teachfosys.com/logo.svg",
         width: 1200,
         height: 630,
         alt: "Art-Folio Preview",
@@ -50,7 +50,15 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Art-Folio – Modern Portfolio & Agency Template",
+    description:
+      "Create stunning designer portfolios and agency landing pages with Art-Folio. Built using Next.js, Tailwind CSS, and GSAP.",
+    images: ["https://art-folio.teachfosys.com/logo.svg"],
+  },
 };
+
 
 
 export default function RootLayout({ children }) {
